@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
 from .models import (
     ShopUser, Address, Category, Product, ProductPhoto, 
     Review, ReviewPhoto, Order, OrderItem, CartItem, 
@@ -7,7 +8,7 @@ from .models import (
 )
 
 @admin.register(ShopUser)
-class ShopUserAdmin(admin.ModelAdmin):
+class ShopUserAdmin(UserAdmin):
     list_display = ('username', 'email', 'is_staff', 'is_active') # 后台列表显示的列 [cite: 173-193]
     search_fields = ('username', 'email')
     list_filter = ('is_staff', 'is_active')
@@ -39,3 +40,4 @@ other_models = [
 ]
 
 admin.site.register(other_models)
+
