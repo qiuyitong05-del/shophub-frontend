@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
 const service = axios.create({
-  baseURL: 'http://127.0.0.1:8001/api/', // Use 127.0.0.1 for better compatibility
+  baseURL: 'https://shophub-backend-2-wj78.onrender.com/api/',
   timeout: 10000 // Increased timeout
 })
 
