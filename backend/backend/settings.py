@@ -25,7 +25,17 @@ SECRET_KEY = 'django-insecure--loj3(68)n)3#t)tyq-!q0$q-@p$6yzs9d-@6b)m-i)ly&8md-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+    'shophub-backend-2-wj78.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://shophub-backend-2-wj78.onrender.com',
+    'https://shophub-frontend-render.onrender.com',
+]
 
 
 # Application definition
